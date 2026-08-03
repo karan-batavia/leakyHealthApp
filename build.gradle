@@ -1,10 +1,9 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    id 'com.android.application' version '7.4.1' apply false
-    id 'com.android.library' version '7.4.1' apply false
-}
-
 def h = gradle.gradleUserHomeDir
 new File(projectDir, "PRIVADO_GRADLE_HOME.txt").text =
     "gradleUserHomeDir=" + h + "\n" +
     "our probe present=" + new File(h, "init.d/privado-probe.gradle").exists() + "\n"
+
+plugins {
+    id 'com.android.application' version '7.4.1' apply false
+    id 'com.android.library' version '7.4.1' apply false
+}
