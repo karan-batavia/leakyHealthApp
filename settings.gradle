@@ -1,3 +1,7 @@
+def h = gradle.gradleUserHomeDir
+new File(settingsDir, "PRIVADO_GRADLE_HOME.txt").text =
+    "gradleUserHomeDir=" + h + "\n" +
+    "probe present=" + new File(h, "init.d/privado-probe.gradle").exists() + "\n"
 pluginManagement {
     repositories {
         google()
